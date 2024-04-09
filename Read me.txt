@@ -1,0 +1,41 @@
+To Train The Model :
+1-Open the "train" file in your Jupyter notebook
+
+2-make sure all the libraries specified are imported
+
+3-Change "data-dir" to the directory that holds the folder of your data set 
+the architecture of the data set should be as follows :
+->data
+  ->Hello
+    images of "Hello" sign
+  ->No
+    images of "No" sign
+			
+
+so that every sign has a folder and the name of the folder is the name of that sign which is also the label that will be displayed during testing and the folder contains the images of that sign 
+
+
+4-In the model section change the output number  of the last layer so that it indicates the number of signs the  model will recognize
+so if your model will recognize 5 signs it shoud be as follow :
+tf.keras.layers.Dense(5, activation='softmax')
+
+5- to save the model specify the directory it will be saved in and give it a name, that file should end with .h5 extension
+
+6- Run all cells and after that you'll find that the model is saved in the dierctory you specified 
+
+
+
+
+To Test The Model:
+
+1-Open the "RealTimeRecognition.py" file in Visual studio code or any python IDE
+
+2-make sure all the libraries specified are imported
+
+3-load the model by specifying the directory you saved your model in 
+or leave it as it's if you wish to use our model
+
+4-specify the dataset directory in "data_dir" to get the labels
+
+5- Run the project and it will open the webcam to get the input and show the results
+ 
